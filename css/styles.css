@@ -1,207 +1,176 @@
-/* --- VARIABLES DE COLOR (ADN Mercado Libre) --- */
+/* --- VARIABLES DE MARCA --- */
 :root {
     --ml-yellow: #fff159;
-    --ml-blue: #3483fa;
     --ml-bg: #ebebeb;
+    --ml-blue: #3483fa;
     --ml-text: #333333;
-    --ml-gray: #999999;
     --ml-green: #00a650;
     --white: #ffffff;
+    --shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
 }
 
-/* --- RESET Y GENERALES --- */
+/* --- ESTILOS GENERALES --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Proxima Nova', -apple-system, Roboto, Arial, sans-serif;
+    font-family: 'Proxima Nova', -apple-system, sans-serif;
 }
 
 body {
     background-color: var(--ml-bg);
     color: var(--ml-text);
+    line-height: 1.6;
 }
 
-/* --- HEADER (Amarillo) --- */
-header {
+h2 {
+    font-weight: 300;
+    font-size: 26px;
+    margin: 20px 0;
+}
+
+/* --- NAVBAR (Estilo Mercado Libre) --- */
+.navbar {
     background-color: var(--ml-yellow);
     padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-nav {
+.navbar-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 0 20px;
-}
-
-/* Fila Superior: Logo y Buscador */
-nav div:first-child {
-    display: flex;
     align-items: center;
-    gap: 40px;
+    justify-content: space-between;
+    padding: 0 20px;
+    gap: 20px;
 }
 
-form {
+.logo h2 {
+    font-weight: bold;
+    color: var(--ml-text);
+    margin: 0;
+    font-size: 22px;
+}
+
+.search-bar {
     flex-grow: 1;
     display: flex;
     background: var(--white);
-    padding: 8px 15px;
+    padding: 7px 15px;
     border-radius: 2px;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    box-shadow: var(--shadow);
 }
 
-form input {
+.search-bar input {
     border: none;
     width: 100%;
     outline: none;
     font-size: 16px;
 }
 
-form button {
+.search-bar button {
     border: none;
     background: none;
-    cursor: pointer;
     border-left: 1px solid #ddd;
     padding-left: 10px;
+    cursor: pointer;
     color: #666;
 }
 
-/* Fila Inferior: Enlaces */
-nav ul {
+.nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 15px;
 }
 
-nav ul li a {
+.nav-links a {
     text-decoration: none;
     color: rgba(51, 51, 51, 0.6);
     font-size: 14px;
 }
 
-nav ul li a:hover {
+.nav-links a:hover {
     color: var(--ml-text);
 }
 
-/* --- BANNER PRINCIPAL --- */
-#banner-principal img {
-    width: 100%;
-    height: auto;
-    display: block;
+/* --- HERO SECTION --- */
+.hero {
+    background-color: var(--ml-yellow);
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%;
 }
 
-/* --- MÉTODOS DE PAGO --- */
-#payment-methods {
-    background: var(--white);
-    max-width: 1200px;
-    margin: -30px auto 30px; /* Sube un poco sobre el banner */
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 10;
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-#payment-methods ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-}
-
-/* --- OFERTAS (Tarjetas) --- */
-#daily-offers {
+/* --- CONTENEDORES DE SECCIONES --- */
+section {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-#daily-offers h2 {
-    font-size: 26px;
-    font-weight: 300;
-    margin-bottom: 20px;
-}
-
-.product-container { /* Agrega esta clase en tu HTML rodeando los articles */
+/* --- PRODUCTOS (Tarjetas) --- */
+.productos-container, .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
 }
 
-article {
+.producto, .dev-card {
     background: var(--white);
-    padding: 0 0 15px 0;
-    border-radius: 4px;
-    overflow: hidden;
-    transition: box-shadow 0.3s;
-    cursor: pointer;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid transparent;
 }
 
-article:hover {
-    box-shadow: 0 7px 16px 0 rgba(0,0,0,0.11);
+.producto:hover, .dev-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 16px 0 rgba(0,0,0,0.1);
 }
 
-article img {
-    width: 100%;
-    border-bottom: 1px solid #eee;
+.producto h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
-article p {
-    padding: 0 16px;
-}
-
-article p:nth-child(2) { /* Precio */
+.producto p {
     font-size: 24px;
+    color: var(--ml-text);
+}
+
+/* --- PORTAFOLIO Y BOTONES --- */
+.dev-card a {
+    display: inline-block;
     margin-top: 15px;
-    color: var(--ml-text);
+    color: var(--ml-blue);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
 }
 
-article p:nth-child(3) { /* Descuento */
-    color: var(--ml-green);
-    font-size: 14px;
-    font-weight: bold;
-}
-
-article p:nth-child(5) { /* Título */
-    font-size: 14px;
-    color: var(--ml-text);
-    margin-top: 8px;
-    line-height: 1.2;
+.dev-card a:hover {
+    text-decoration: underline;
 }
 
 /* --- FOOTER --- */
 footer {
     background: var(--white);
     padding: 40px 0;
-    margin-top: 50px;
-    border-top: 1px solid #ddd;
-}
-
-footer section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 20px;
-}
-
-footer ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    justify-content: center;
-}
-
-footer a {
-    text-decoration: none;
-    font-size: 13px;
-    color: var(--ml-text);
-}
-
-footer p {
     text-align: center;
-    font-size: 12px;
-    color: var(--ml-gray);
-    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    margin-top: 60px;
+    color: #999;
+    font-size: 13px;
 }
