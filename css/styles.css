@@ -1,3 +1,207 @@
-body{
-    background-color: black;
+/* --- VARIABLES DE COLOR (ADN Mercado Libre) --- */
+:root {
+    --ml-yellow: #fff159;
+    --ml-blue: #3483fa;
+    --ml-bg: #ebebeb;
+    --ml-text: #333333;
+    --ml-gray: #999999;
+    --ml-green: #00a650;
+    --white: #ffffff;
+}
+
+/* --- RESET Y GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Proxima Nova', -apple-system, Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--ml-bg);
+    color: var(--ml-text);
+}
+
+/* --- HEADER (Amarillo) --- */
+header {
+    background-color: var(--ml-yellow);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
+}
+
+/* Fila Superior: Logo y Buscador */
+nav div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+form {
+    flex-grow: 1;
+    display: flex;
+    background: var(--white);
+    padding: 8px 15px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+form input {
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+}
+
+form button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-left: 1px solid #ddd;
+    padding-left: 10px;
+    color: #666;
+}
+
+/* Fila Inferior: Enlaces */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(51, 51, 51, 0.6);
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: var(--ml-text);
+}
+
+/* --- BANNER PRINCIPAL --- */
+#banner-principal img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- MÉTODOS DE PAGO --- */
+#payment-methods {
+    background: var(--white);
+    max-width: 1200px;
+    margin: -30px auto 30px; /* Sube un poco sobre el banner */
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+}
+
+#payment-methods ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+/* --- OFERTAS (Tarjetas) --- */
+#daily-offers {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+#daily-offers h2 {
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.product-container { /* Agrega esta clase en tu HTML rodeando los articles */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+article {
+    background: var(--white);
+    padding: 0 0 15px 0;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+article:hover {
+    box-shadow: 0 7px 16px 0 rgba(0,0,0,0.11);
+}
+
+article img {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+article p {
+    padding: 0 16px;
+}
+
+article p:nth-child(2) { /* Precio */
+    font-size: 24px;
+    margin-top: 15px;
+    color: var(--ml-text);
+}
+
+article p:nth-child(3) { /* Descuento */
+    color: var(--ml-green);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+article p:nth-child(5) { /* Título */
+    font-size: 14px;
+    color: var(--ml-text);
+    margin-top: 8px;
+    line-height: 1.2;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: var(--white);
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 1px solid #ddd;
+}
+
+footer section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--ml-text);
+}
+
+footer p {
+    text-align: center;
+    font-size: 12px;
+    color: var(--ml-gray);
+    margin-top: 10px;
 }
