@@ -1,100 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <link rel="stylesheet" href="css/styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado Libre Clon - Santiago Urbina</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Clon MercadoLibre</title>
+
+<link rel="stylesheet" href="css/styles.css">
+
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <div>
-                <img src="#" alt="Logo Mercado Libre">
-                <form action="#">
-                    <input type="text" placeholder="Buscar productos, marcas y más…">
-                    <button type="submit">Buscar</button>
-                </form>
-                <p>Envío gratis en 24h a partir de $XX.XXX</p>
-            </div>
+<!-- NAVBAR -->
 
-            <ul>
-                <li><a href="#">Categorías</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Historial</a></li>
-                <li><a href="#">Supermercado</a></li>
-                <li><a href="#">Moda</a></li>
-                <li><a href="#">Vender</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
+<nav class="navbar">
 
-            <ul>
-                <li><a href="#">Crea tu cuenta</a></li>
-                <li><a href="#">Ingresa</a></li>
-                <li><a href="#">Mis compras</a></li>
-                <li><a href="#">Carrito</a></li>
-            </ul>
-        </nav>
-    </header>
+<div class="navbar-container">
 
-    <main>
-        <section id="banner-principal">
-            <img src="#" alt="Banner de promociones principales">
-        </section>
+<div class="logo">
+<h2>MercadoClone</h2>
+</div>
 
-        <section id="payment-methods">
-            <ul>
-                <li><strong>Tarjeta de crédito</strong> (Cuotas sin interés)</li>
-                <li><strong>Tarjeta de débito</strong> (Pago al instante)</li>
-                <li><strong>Efectivo</strong> (Puntos de pago)</li>
-                <li><strong>Más medios de pago</strong></li>
-            </ul>
-        </section>
+<div class="search-bar">
+<input type="text" placeholder="Buscar productos...">
+<button>Buscar</button>
+</div>
 
-        <section id="daily-offers">
-            <h2>Ofertas del día</h2>
-            <article>
-                <img src="#" alt="Imagen de producto">
-                <p>$ 120.000</p>
-                <p>30% OFF</p>
-                <p>Envío gratis</p>
-                <p>Smart TV 4K 50 pulgadas</p>
-            </article>
-            
-            <article>
-                <img src="#" alt="Imagen de producto">
-                <p>$ 85.000</p>
-                <p>15% OFF</p>
-                <p>Envío gratis</p>
-                <p>Zapatillas de Running</p>
-            </article>
-        </section>
+<ul class="nav-links">
+<li><a href="#">Inicio</a></li>
+<li><a href="#productos">Productos</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#portafolio">Portafolio</a></li>
+</ul>
 
-        <section id="categories">
-            <h2>Categorías populares</h2>
-            <ul>
-                <li><a href="#">Tecnología</a></li>
-                <li><a href="#">Hogar y Muebles</a></li>
-                <li><a href="#">Electrodomésticos</a></li>
-                <li><a href="#">Herramientas</a></li>
-                <li><a href="#">Belleza y Cuidado Personal</a></li>
-            </ul>
-        </section>
-    </main>
+</div>
 
-    <footer>
-        <section>
-            <ul>
-                <li><a href="#">Trabajá con nosotros</a></li>
-                <li><a href="#">Términos y condiciones</a></li>
-                <li><a href="#">Cómo cuidamos tu privacidad</a></li>
-                <li><a href="#">Accesibilidad</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
-        </section>
-        <p>Copyright © 1999-2026 MercadoLibre S.R.L.</p>
-    </footer>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Bienvenido a MercadoClone</h1>
+<p>Encuentra los mejores productos al mejor precio</p>
+
+</section>
+
+
+<!-- PRODUCTOS -->
+
+<section id="productos">
+
+<h2>Productos Destacados</h2>
+
+<div class="productos-container">
+
+<div class="producto">
+<h3>Iphone 17 promax</h3>
+<p>$6.999.000</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICIOS -->
+
+<section id="servicios">
+
+<h2>Servicios</h2>
+
+<p>Ofrecemos desarrollo web, aplicaciones y soluciones tecnológicas.</p>
+
+</section>
+
+
+<!-- PORTAFOLIO -->
+
+<section id="portafolio">
+
+<h2>Portafolio del equipo</h2>
+
+<p>Conoce a los desarrolladores que trabajaron en este proyecto.</p>
+
+<div class="portfolio-container">
+
+<div class="dev-card">
+<h3>Desarrollador 1</h3>
+<p>Frontend Developer</p>
+<a href="portafolio1/dev.html">Ver portafolio</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>Proyecto de clase inspirado en MercadoLibre</p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
 
 </body>
+
 </html>
